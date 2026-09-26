@@ -7,7 +7,8 @@ using only open-source models.
 > thesis, research paper...) by changing one variable.
 
 ---
-
+## Live demo (Hugging Face Space)
+[Hugging Face Spaces](https://huggingface.co/spaces/sy12ssss/report-explorer)
 
 ## Architecture
 
@@ -61,9 +62,6 @@ whole pipeline to a single ~4 GB model instead of juggling two separate LLMs.
 │   └── data/, images/          # index.json + images go here
 └── .gitignore
 ```
-
-## Live demo (Hugging Face Space)
-
 
 
 ## Running it on Kaggle (recommended)
