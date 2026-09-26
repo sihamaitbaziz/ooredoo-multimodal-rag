@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Notebook working outputs at the repo root only (anchored with a leading /).
+# Their copies under space/data/ and space-static/data|images/ are NOT
+# ignored — those are the actual deployment payloads and must be committed.
+/extracted_images/
+/chroma_db/
+/images_for_space/
+/index.json
+/space_export.zip
+/*.pdf

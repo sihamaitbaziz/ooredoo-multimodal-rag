@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Report Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◆</span>
+        <span class="brand-name">Report Explorer</span>
+      </div>
+      <span class="badge" id="status-badge">loading model…</span>
+    </header>
+
+    <main class="main">
+      <section class="intro">
+        <h1>Find it in the report.</h1>
+        <p>Runs entirely in your browser —Type a question, get the passages and charts that answer it, cited by page.</p>
+      </section>
+
+      <form id="ask-form" class="ask-form">
+        <input
+          id="question"
+          type="text"
+          placeholder="e.g. Which region grew fastest, and what drove it?"
+          autocomplete="off"
+          disabled
+        />
+        <button type="submit" id="ask-btn" disabled>
+          <span class="btn-label">Search</span>
+          <span class="spinner" hidden></span>
+        </button>
+      </form>
+
+      <div class="examples" id="examples">
+        <button class="chip" data-q="What is this report about?">What is this report about?</button>
+        <button class="chip" data-q="Summarize the key financial figures.">Key financial figures</button>
+        <button class="chip" data-q="What charts or diagrams appear in the report?">Charts &amp; diagrams</button>
+      </div>
+
+      <section id="result" class="result" hidden>
+        <div class="sources-label">Best matching passages</div>
+        <div id="sources-list" class="sources-list"></div>
+      </section>
+
+      <p id="error" class="error" hidden></p>
+    </main>
+
+    <footer class="footer">
+      Client-side retrieval via Transformers.js .
+    </footer>
+  </div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
